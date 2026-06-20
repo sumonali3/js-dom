@@ -1,0 +1,131 @@
+* {
+     padding: 0;
+     box-sizing: border-box;
+     margin: 0;
+}
+li{
+     list-style: none;
+}
+.container {
+     width: 800px;
+     margin: 0 auto;
+     border: 2px solid gray;
+     border-radius: 12px;
+     background: #b3d5da;
+     padding: 30px;
+     margin-top: 50px;
+}
+
+.container .logo {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     justify-content: center;
+     align-items: center;
+}
+
+.container .logo h1 {
+     font-size: 25px;
+     font-weight: 600;
+     text-transform: uppercase;
+}
+
+.container .add-task {
+     display: flex;
+     gap: 20px;
+     background: #fff;
+     justify-content: center;
+     font-size: 18px;
+     padding: 20px;
+     border: 2px solid #405c5fb6;
+     border-radius: 12px;
+     align-items: center;
+     margin-top: 30px;
+}
+
+.container .add-task input[type="text"]{
+     padding: 5px;
+     border-radius: 8px;
+     border: 1px solid #b3d5da;
+
+}
+.container .add-task input:focus{
+     outline: 1px solid #41a3ab;
+}
+
+.container .add-task input[type="button"]{
+     padding: 5px 15px;
+     border-radius: 5px;
+     border: 1px solid gray;
+     cursor: pointer;
+}
+
+.container .task-group{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr) ;
+     gap: 20px;
+     justify-content: space-around;
+     margin-top: 40px;
+}
+
+.container .task-group .incomplete-task,
+.container .task-group .complete-task{
+     background: #fff;
+     padding: 10px 20px;
+     border-radius: 8px;
+     border: 1px solid #41a3ab;
+}
+
+.container .task-group .incomplete-task h2,
+.container .task-group .complete-task h2{
+     font-size: 25px;
+     font-weight: 60px;
+     margin-bottom: 10px;
+}
+
+.container .task-group .incomplete-task hr,
+.container .task-group .complete-task hr{
+     margin-bottom: 10px;
+     border: none;
+     height: 2px;
+     background: #b3d5da;
+     width: 100%;
+
+}
+
+.container .task-group .item{
+     display: flex;
+     gap: 10px;
+     margin: 7px 0;
+     padding-bottom: 5px;
+     font-size: 18px;
+     border-bottom: 1px solid rgba(128, 128, 128, 0.307);
+     cursor: pointer;
+}
+
+.container .task-group input[type="checkbox"]{
+     accent-color: #b3d5da;
+     border-radius: 2px;
+     cursor: pointer;
+}
+
+.container .task-group input[type="checkbox"]:checked{
+     accent-color: red;
+}
+
+
+.container .task-group .complete-task ul li{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.container .task-group .complete-task ul li button{
+     padding: 5px 15px;
+     background: red;
+     border: 1px solid #b3d5da;
+     color: #fff;
+     border-radius: 5px;
+     cursor: pointer;
+
+}
