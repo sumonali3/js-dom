@@ -134,7 +134,6 @@ li{
 @media screen and (max-width: 767px){
      body{
           padding: 15px;
-          overflow: hidden;
      }
      .container{
           width: 100%;
