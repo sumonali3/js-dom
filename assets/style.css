@@ -129,3 +129,27 @@ li{
      cursor: pointer;
 
 }
+
+
+@media screen and (max-width: 767px){
+     body{
+          padding: 15px;
+     }
+     .container{
+          width: 100%;
+          padding: 20px;
+     }
+
+     .container .add-task{
+          flex-direction: column;
+          gap: 15px;
+     }
+
+     .container .add-task input[type="text"]{
+          width: 100%;
+     }
+
+     .container .task-group{
+          grid-template-columns: 1fr;
+     }
+}
