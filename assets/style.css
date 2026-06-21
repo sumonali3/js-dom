@@ -3,7 +3,7 @@
      box-sizing: border-box;
      margin: 0;
 }
-li{
+li {
      list-style: none;
 }
 .container {
@@ -23,6 +23,11 @@ li{
      justify-content: center;
      align-items: center;
 }
+.container .logo img {
+     width: 100%;
+     max-width: 20%;
+     border-radius: 12px;
+}
 
 .container .logo h1 {
      font-size: 25px;
@@ -31,45 +36,46 @@ li{
 }
 
 .container .add-task {
-     display: flex;
-     gap: 20px;
      background: #fff;
-     justify-content: center;
      font-size: 18px;
      padding: 20px;
-     border: 2px solid #405c5fb6;
+     border: 1px solid #41a3ab;
      border-radius: 12px;
-     align-items: center;
      margin-top: 30px;
 }
+.container .add-task form {
+     display: flex;
+     gap: 20px;
+     align-items: center;
+     justify-content: center;
+}
 
-.container .add-task input[type="text"]{
+.container .add-task input[type='text'] {
      padding: 5px;
      border-radius: 8px;
      border: 1px solid #b3d5da;
-
 }
-.container .add-task input:focus{
+.container .add-task input:focus {
      outline: 1px solid #41a3ab;
 }
 
-.container .add-task input[type="button"]{
+.container .add-task input[type='submit'] {
      padding: 5px 15px;
      border-radius: 5px;
      border: 1px solid gray;
      cursor: pointer;
 }
 
-.container .task-group{
+.container .task-group {
      display: grid;
-     grid-template-columns: repeat(2, 1fr) ;
+     grid-template-columns: repeat(2, 1fr);
      gap: 20px;
      justify-content: space-around;
      margin-top: 40px;
 }
 
 .container .task-group .incomplete-task,
-.container .task-group .complete-task{
+.container .task-group .complete-task {
      background: #fff;
      padding: 10px 20px;
      border-radius: 8px;
@@ -77,23 +83,22 @@ li{
 }
 
 .container .task-group .incomplete-task h2,
-.container .task-group .complete-task h2{
+.container .task-group .complete-task h2 {
      font-size: 25px;
      font-weight: 60px;
      margin-bottom: 10px;
 }
 
 .container .task-group .incomplete-task hr,
-.container .task-group .complete-task hr{
+.container .task-group .complete-task hr {
      margin-bottom: 10px;
      border: none;
      height: 2px;
      background: #b3d5da;
      width: 100%;
-
 }
 
-.container .task-group .item{
+.container .task-group .item {
      display: flex;
      gap: 10px;
      margin: 7px 0;
@@ -103,53 +108,59 @@ li{
      cursor: pointer;
 }
 
-.container .task-group input[type="checkbox"]{
+.container .task-group input[type='checkbox'] {
      accent-color: #b3d5da;
      border-radius: 2px;
      cursor: pointer;
 }
 
-.container .task-group input[type="checkbox"]:checked{
+.container .task-group input[type='checkbox']:checked {
      accent-color: red;
 }
 
-
-.container .task-group .complete-task ul li{
+.container .task-group .complete-task ul li {
      display: flex;
      align-items: center;
      justify-content: space-between;
 }
 
-.container .task-group .complete-task ul li button{
+.container .task-group .complete-task ul li button {
      padding: 5px 15px;
      background: red;
      border: 1px solid #b3d5da;
      color: #fff;
      border-radius: 5px;
      cursor: pointer;
-
 }
-
-
-@media screen and (max-width: 767px){
-     body{
+@media screen and (max-width: 1024px) {
+     body {
           padding: 15px;
      }
-     .container{
+     .container {
+          width: 100%;
+          padding: 20px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     body {
+          padding: 15px;
+     }
+     .container {
           width: 100%;
           padding: 20px;
      }
 
-     .container .add-task{
+     .container .add-task form {
           flex-direction: column;
           gap: 15px;
      }
 
-     .container .add-task input[type="text"]{
-          width: 100%;
+     .container .add-task input[type='text'] {
+          width: 80%;
      }
 
-     .container .task-group{
+     .container .task-group {
           grid-template-columns: 1fr;
      }
 }
